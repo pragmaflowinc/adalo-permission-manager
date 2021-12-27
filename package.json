@@ -1,0 +1,36 @@
+{
+  "name": "adalo-permission-manager",
+  "description": "Enable specific permissions for Native Adalo",
+  "version": "1.0.15",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "adalo dev",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./example-logo.png",
+    "displayName": "Adalo Permission Manager",
+    "components": [
+      {
+        "name": "PermissionManager",
+        "manifest": "./src/components/PermissionManager/manifest.json"
+      }
+    ],
+    "iosInstallScript": "./scripts/install_ios.sh",
+    "androidInstallScript": "./scripts/install_android.sh"
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.44",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5"
+  },
+  "dependencies": {
+    "react-native-permissions": "^3.2.0",
+    "react-native-webview": "^11.15.0"
+  }
+}

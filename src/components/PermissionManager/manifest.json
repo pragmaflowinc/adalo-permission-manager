@@ -1,0 +1,67 @@
+{
+  "displayName": "Permission Manager",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "resizeX": true,
+  "resizeY": true,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "allowMicrophone",
+      "displayName": "Use Microphone",
+      "type": "boolean",
+      "defaultValue": false,
+      "global": true
+    },
+    {
+      "name": "allowCamera",
+      "displayName": "Use Camera",
+      "type": "boolean",
+      "defaultValue": false,
+      "global": true
+    }
+  ],
+  "childComponents": [
+    {
+      "name": "useMicrophone",
+      "displayName": "Use Microphone",
+      "helpText": "Only works if you enabled use microphone above",
+      "props": [
+        {
+          "name": "onMicPermissionSuccess",
+          "displayName": "Triggered when granted microphone permissions",
+          "type": "action"
+        },
+        {
+          "name": "onMicPermissionFailed",
+          "displayName": "Triggered when not granted microphone permissions",
+          "type": "action",
+          "arguments": [
+            {
+              "displayName": "reason",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "useCamera",
+      "displayName": "Use Camera",
+      "helpText": "Only works if you enabled use camera above",
+      "props": [
+        {
+          "name": "onCameraPermissionSuccess",
+          "displayName": "Triggered when granted camera permissions",
+          "type": "action"
+        },
+        {
+          "name": "onCameraPermissionFailed",
+          "displayName": "Triggered when not granted camera permissions",
+          "type": "action"
+        }
+      ]
+    }
+  ]
+}
