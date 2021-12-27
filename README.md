@@ -1,0 +1,1 @@
+# adalo-permission-manager
