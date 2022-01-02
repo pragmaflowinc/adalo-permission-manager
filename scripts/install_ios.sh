@@ -3,6 +3,7 @@
 set -e
 set -x
 
+dir=$(dirname "${0}")
 installMicrophone=$("${dir}/get_permission_requests.js" allowMicrophone) 
 installCamera=$("${dir}/get_permission_requests.js" allowCamera) 
 
